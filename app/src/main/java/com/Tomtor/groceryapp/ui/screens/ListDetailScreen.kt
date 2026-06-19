@@ -24,6 +24,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material.icons.automirrored.filled.Sort
+import androidx.activity.compose.BackHandler
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListDetailScreen(
@@ -71,7 +72,9 @@ fun ListDetailScreen(
         }
         viewModel.setSortOrder(order)
     }
-
+    BackHandler(enabled = isEditMode) {
+        isEditMode = false
+    }
     Scaffold(
         topBar = {
             TopAppBar(

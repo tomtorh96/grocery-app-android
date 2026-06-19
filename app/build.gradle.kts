@@ -13,10 +13,10 @@ android {
         targetSdk = 37
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        val baseUrl = System.getenv("BASE_URL") ?: "http://10.0.2.2:8080/"
-        val wsUrl = System.getenv("WS_URL") ?: "ws://10.0.2.2:8080"
+
+        val baseUrl = System.getenv("BASE_URL") ?: "http://YOUR_IP:8080/"
+        val wsUrl = System.getenv("WS_URL") ?: "ws://YOUR_IP:8080"
         buildConfigField("String", "BASE_URL", "\"$baseUrl\"")
         buildConfigField("String", "WS_URL", "\"$wsUrl\"")
     }

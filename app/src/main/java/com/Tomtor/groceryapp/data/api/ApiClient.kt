@@ -4,7 +4,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
+import com.Tomtor.groceryapp.BuildConfig
 object ApiClient {
 
     private const val BASE_URL = BuildConfig.BASE_URL
